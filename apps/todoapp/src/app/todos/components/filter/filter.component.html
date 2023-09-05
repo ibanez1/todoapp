@@ -1,0 +1,10 @@
+<div class="todoapp-filter">
+  <input
+    class="todoapp-new-todo"
+    placeholder="What needs to be done?"
+    autoFocus
+    [value]="text"
+    (keyup)="changeText($event)"
+    (keyup.enter)="addTodo()"
+  />
+</div>

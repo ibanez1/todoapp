@@ -1,0 +1,36 @@
+<h1 class="todoapp-title">TO-DOs</h1>
+<header class="todoapp-header" [ngClass]="{ hidden: noTodosClass() }">
+  <span class="todoapp-todo-count">
+    <strong>{{ activeCount() }}</strong>
+    {{ itemsLeftText() }}
+  </span>
+  <ul class="todoapp-filters">
+    <li class="todoapp-filters__element">
+      <a
+        class="todoapp-filters__element--action"
+        href="/"
+        [ngClass]="{ selected: filterSig() === filterEnum.all }"
+        (click)="changeFilter($event, filterEnum.all)"
+        >All</a
+      >
+    </li>
+    <li class="todoapp-filters__element">
+      <a
+        class="todoapp-filters__element--action"
+        href="/"
+        [ngClass]="{ selected: filterSig() === filterEnum.active }"
+        (click)="changeFilter($event, filterEnum.active)"
+        >Active</a
+      >
+    </li>
+    <li class="todoapp-filters__element">
+      <a
+        class="todoapp-filters__element--action"
+        href="/"
+        [ngClass]="{ selected: filterSig() === filterEnum.completed }"
+        (click)="changeFilter($event, filterEnum.completed)"
+        >Completed</a
+      >
+    </li>
+  </ul>
+</header>

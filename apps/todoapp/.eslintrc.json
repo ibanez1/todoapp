@@ -9,7 +9,6 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "goalsystems",
             "style": "camelCase"
           }
         ],
@@ -17,7 +16,6 @@
           "error",
           {
             "type": "element",
-            "prefix": "goalsystems",
             "style": "kebab-case"
           }
         ]

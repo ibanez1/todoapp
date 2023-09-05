@@ -1,0 +1,56 @@
+.todoapp-header {
+  padding: 10px 15px;
+  height: 20px;
+  text-align: center;
+  font-size: 15px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.todoapp-title {
+    position: absolute;
+    top: -140px;
+    width: 100%;
+    font-size: 80px;
+    font-weight: 200;
+    text-align: center;
+    color: #3f47b8;
+    -webkit-text-rendering: optimizeLegibility;
+    -moz-text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility;
+}
+
+.todoapp-todo-count {
+  float: left;
+  text-align: left;
+}
+
+.todoapp-todo-count strong {
+  font-weight: 300;
+}
+
+
+.todoapp-filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  &__element{
+    display: inline;
+    &--action{
+      color: inherit;
+      margin: 3px;
+      padding: 3px 7px;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      &:hover{
+        border-color: rgba(175, 47, 47, 0.1);
+      }
+      &.selected{
+        border-color: rgba(175, 47, 47, 0.2);
+      }
+    }
+  }
+}
