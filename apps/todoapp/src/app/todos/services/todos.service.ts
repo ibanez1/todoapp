@@ -19,7 +19,7 @@ export class TodosService {
   }
 
   getTodosRequest(): Observable<TodoResponse> {
-		return this.httpClient.get<TodoResponse>(this.apiURL + '/todos')
+		return this.httpClient.get<TodoResponse>(this.apiURL + 'todos')
     .pipe(retry(1), catchError(this.handleError));
 	}
 
