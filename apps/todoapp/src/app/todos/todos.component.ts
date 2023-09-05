@@ -14,8 +14,8 @@ import { TodosService } from './services/todos.service';
 export class TodosComponent {
   todosService = inject(TodosService);
   
-  ngOnInit(): void {
-    this.todosService.getTodos();
-  }
+  // ngOnInit(): void {
+  //   this.todosService.getTodos();
+  // }
 }
 
