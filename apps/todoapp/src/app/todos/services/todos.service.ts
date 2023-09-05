@@ -61,6 +61,24 @@ getTodos() {
       todos.map((todo) => ({ ...todo, isCompleted }))
     );
   }
+
+  /////////////////////////WIP SERVICES//////////////////////////////
+  addTodoRequest(): Observable<TodoResponse> {
+		return this.httpClient.post<TodoResponse>(this.apiURL + '/todos', {todo: "todo"})
+    .pipe(retry(1), catchError(this.handleError));
+	}
+
+  changeTodoRequest(id:string): Observable<TodoResponse> {
+		return this.httpClient.put<TodoResponse>(this.apiURL + `/todos/${id}`, {todo: "todo"})
+    .pipe(retry(1), catchError(this.handleError));
+	}
+
+  removeTodoRequest(id: string): Observable<TodoResponse> {
+		return this.httpClient.delete<TodoResponse>(this.apiURL + `/todos/${id}`)
+    .pipe(retry(1), catchError(this.handleError));
+	}
+
+
   // Error handling
   handleError(error: any) {
     let errorMessage = '';
