@@ -5,6 +5,6 @@
     autoFocus
     [value]="text"
     (keyup)="changeText($event)"
-    (keyup.enter)="addTodo()"
+    (keydown.enter)="addTodo()"
   />
 </div>
